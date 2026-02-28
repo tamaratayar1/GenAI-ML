@@ -1,13 +1,18 @@
 # Write the following Python code to do the following (Complete ALL of the following using dictionary comprehension)
 
-# Given a list [("name", "Elie"), ("job", "Instructor")], create a dictionary that looks like this {'job': 'Instructor', 'name': 'Elie'} (the order does not matter).
+# 1. Given a list [("name", "Elie"), ("job", "Instructor")], create a dictionary that looks like this {'job': 'Instructor', 'name': 'Elie'} (the order does not matter).
 
-# Given two lists ["CA", "NJ", "RI"] and ["California", "New Jersey", "Rhode Island"] return a dictionary that looks like this {'CA': 'California', 'NJ': 'New Jersey', 'RI': 'Rhode Island'}. You can research the zip method to help you.
+print({k: v for k, v in [("name", "Elie"), ("job", "Instructor")]})
 
-# Create a dictionary with the key as a vowel in the alphabet and the value as 0. Your dictionary should look like this {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}. (Do not use the fromkeys method).
+# 2. Given two lists ["CA", "NJ", "RI"] and ["California", "New Jersey", "Rhode Island"] return a dictionary that looks like this {'CA': 'California', 'NJ': 'New Jersey', 'RI': 'Rhode Island'}. You can research the zip method to help you.
 
-""
-Create a dictionary starting with the key of the position of the letter and the value as the letter in the alphabet. You should return something like this (Hint - use chr(65) to get the first letter):
+print({k: v for k, v in zip(["CA", "NJ", "RI"], ["California", "New Jersey", "Rhode Island"])})
+
+# 3. Create a dictionary with the key as a vowel in the alphabet and the value as 0. Your dictionary should look like this {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}. (Do not use the fromkeys method).
+
+print({k: 0 for k in "aeiou"})
+
+# 4. Create a dictionary starting with the key of the position of the letter and the value as the letter in the alphabet. You should return something like this (Hint - use chr(65) to get the first letter):
 
 {1: 'A',
  2: 'B',
@@ -35,8 +40,13 @@ Create a dictionary starting with the key of the position of the letter and the 
  24: 'X',
  25: 'Y',
  26: 'Z'}
-""
 
-""Super Bonus
+print({k: chr(v) for k, v in zip(range(1,27), range(65, 91))})
+
+"""
+Super Bonus
+
 Given the string “awesome sauce” return a dictionary with the keys as vowels and the values as the count of vowels. Your dictionary should look like {‘a’: 2, ‘e’: 3, ‘i’: 0, ‘o’: 1, ‘u’: 1}
-""
+"""
+
+print({k: "awesomesauce".count(k) for k in "aeiou"})
