@@ -1,4 +1,4 @@
-# 1. difference:this function takes in two parameters and returns the difference between the two
+# 1. difference: this function takes in two parameters and returns the difference between the two
 
 from codecs import charmap_build
 from re import A
