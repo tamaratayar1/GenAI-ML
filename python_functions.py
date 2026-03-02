@@ -192,3 +192,43 @@ print(one_addition(2, 2))
 @once
 def add(a,b):
     return a + b
+    
+
+#Codewars: 
+
+# Sentence Count
+
+def sentence_count(paragraph):
+    count = 0
+    for char in paragraph:
+        if char in ".?!":
+            count += 1
+    return count
+
+print(sentence_count("Hello. How are you? I am fine. Thank you."))
+
+# Tortoise Racing
+
+def race (v1, v2, g): 
+    if v1>=v2:
+        return None
+    
+    total_seconds = (g * 3600) // (v2 - v1) 
+    hours = total_seconds // 3600
+    minutes = (total_seconds % 3600) // 60
+    seconds = total_seconds % 60
+    return [hours, minutes, seconds]
+
+print(race(720, 850, 70))
+print(race(80, 91, 37))
+print(race(80, 100, 40))
+
+# Calculate String Rotation
+
+def shifted_diff(s1, s2):
+    if len(s1) != len(s2): 
+        return -1 
+    return (s2+s2).find(s1)
+
+print(shifted_diff("eecoff","coffee"))
+
